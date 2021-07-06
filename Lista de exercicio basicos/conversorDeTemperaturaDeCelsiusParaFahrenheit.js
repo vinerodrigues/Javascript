@@ -7,18 +7,19 @@ function main(){
     mostrarTemperatura(temperaturaEmFahrenheit); 
 }
 
-function obterTemperaturaEmCelcius(){
-    temperatura = 35.55
-    return temperatura
+/* em JS a função pode ser armazenada em uma variavel*/
+/*As setas substituem 'function' o que deixa a função mais consiza*/
+
+const obterTemperaturaEmCelcius = () => 35.55;
+
+const conversorDeCelciusParaFahrenheit = (temperaturaEmCelcius) => {
+    temperaturaEmFahrenheit = ((temperaturaEmCelcius*9)/5) + 32;
+    return temperaturaEmFahrenheit; 
 }
 
-function conversorDeCelciusParaFahrenheit(temperaturaEmCelcius){
-    temperaturaEmFahrenheit = ((temperaturaEmCelcius*9)/5) + 32
-    return temperaturaEmFahrenheit 
-}
 
 function mostrarTemperatura(temperatura){
-    console.log(temperatura)
+    console.log(`A temperatura é ${temperatura}° `);
 }
 
-main()
+main();
